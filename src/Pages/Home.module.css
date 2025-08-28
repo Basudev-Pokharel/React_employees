@@ -1,0 +1,29 @@
+.section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #f8fafc; /* light background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b; /* slate/dark text */
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #2563eb; /* modern blue */
+  margin-bottom: 15px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.section p:last-child {
+  font-style: italic;
+  color: #475569; /* subtle gray */
+}
