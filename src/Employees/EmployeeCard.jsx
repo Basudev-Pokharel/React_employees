@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
@@ -97,9 +97,11 @@ const EmployeeCard = ({
       setUpdateDone(true);
     });
   }
-  setTimeout(() => {
-    setUpdateDone(false);
-  }, 3000);
+  useEffect(() => {
+    setTimeout(() => {
+      setUpdateDone(false);
+    }, 2000);
+  }, [updateDone]);
 
   return (
     <Card>

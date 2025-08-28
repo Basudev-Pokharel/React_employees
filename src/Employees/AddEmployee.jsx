@@ -1,4 +1,6 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import styled from "styled-components";
 
 const Section = styled.section`
@@ -57,21 +59,24 @@ const Section = styled.section`
 `;
 
 function AddEmployee() {
+  let navigate = useNavigate();
   const [data, setData] = useState({});
   function handleChange(e) {
     const { name, value } = e.target;
     setData((prev) => ({ ...prev, [name]: value }));
   }
-  function Submit() {
+  function Submit(e) {
+    e.preventDefault();
+    // console.log(data);
     axios.post(`http://localhost:5050/employees`, data).then((data) => {
-      getRequest();
+      navigate("/employees");
     });
   }
   return (
-    <Section class="employee-form">
+    <Section className="employee-form">
       <h2>Add Employee</h2>
       <form>
-        <label for="name">Full Name</label>
+        <label htmlFor="name">Full Name</label>
         <input
           type="text"
           id="name"
@@ -81,7 +86,7 @@ function AddEmployee() {
           onChange={handleChange}
         />
 
-        <label for="role">Role</label>
+        <label htmlFor="role">Role</label>
         <input
           type="text"
           id="role"
@@ -91,7 +96,7 @@ function AddEmployee() {
           onChange={handleChange}
         />
 
-        <label for="location">Location</label>
+        <label htmlFor="location">Location</label>
         <input
           type="text"
           id="location"
@@ -101,7 +106,7 @@ function AddEmployee() {
           onChange={handleChange}
         />
 
-        <label for="age">Age</label>
+        <label htmlFor="age">Age</label>
         <input
           type="number"
           id="age"
@@ -112,7 +117,7 @@ function AddEmployee() {
           onChange={handleChange}
         />
 
-        <label for="yearsStarted">Year Started</label>
+        <label htmlFor="yearsStarted">Year Started</label>
         <input
           type="number"
           id="yearsStarted"
@@ -123,7 +128,9 @@ function AddEmployee() {
           onChange={handleChange}
         />
 
-        <button type="submit">Submit</button>
+        <button type="submit" onClick={Submit}>
+          Submit
+        </button>
       </form>
     </Section>
   );

@@ -34,7 +34,9 @@ const Anchor = styled(Link)`
 function Header() {
   return (
     <HeaderStyle>
-      <H1>🌐 My Awesome Website</H1>
+      <H1>
+        <a href="/">🌐 My Awesome Website</a>
+      </H1>
       <nav>
         <Anchor to="/add">Add</Anchor>
         <Anchor to="/employees">Employee</Anchor>

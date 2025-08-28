@@ -27,17 +27,29 @@ function Footer() {
       <p>© 2025 My Awesome Website. All rights reserved.</p>
       <p>
         🌍 Follow us:
-        <a href="https://github.com" target="_blank" rel="noreferrer">
+        <a
+          href="https://github.com/Basudev-Pokharel"
+          target="_blank"
+          rel="noreferrer"
+        >
           {" "}
           GitHub
         </a>{" "}
         |
-        <a href="https://twitter.com" target="_blank" rel="noreferrer">
+        <a
+          href="https://github.com/Basudev-Pokharel"
+          target="_blank"
+          rel="noreferrer"
+        >
           {" "}
           Twitter
         </a>{" "}
         |
-        <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.linkedin.com/in/basudev-pokharel/"
+          target="_blank"
+          rel="noreferrer"
+        >
           {" "}
           LinkedIn
         </a>

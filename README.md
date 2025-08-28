@@ -1,12 +1,81 @@
-# React + Vite
+# Employee Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **React + JSON Server** project to manage employee data.  
+This project allows you to **view, add, edit, and delete employees** with a clean UI using **styled-components**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Display all employees in cards with relevant information.
+- Edit employee data inline.
+- Delete employees from the list.
+- Show success message on updates.
+- Fully powered by **JSON Server** for backend simulation.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+- **Frontend:** React, Styled-Components
+- **Backend:** JSON Server (mock REST API)
+- **HTTP Requests:** Axios
+
+---
+
+## Getting Started
+
+Follow these steps to run the project locally:
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repo-url>
+cd <your-repo-folder>
+```
+
+### 2. Run Json-Server
+
+```js
+npm install
+npm run server
+//It will run at: http://localhost:5050
+```
+
+### 3. Run Node.js Commands
+
+```js
+npm i
+npm run dev
+//It will run at: http://localhost:5173
+```
+
+## Folder structure
+
+```
+React_employees/
+├─ node_modules/
+├─ public/
+├─ src/
+│   ├─ Pages/
+│   │   ├─ About.jsx
+│   │   ├─ Contact.jsx
+│   │   ├─ Explore.jsx
+│   │   ├─ Footer.jsx
+│   │   ├─ Header.jsx
+│   │   ├─ Home.module.css
+│   │   ├─ Login.jsx
+│   │   └─ User.jsx
+│   ├─ App.jsx
+│   ├─ global.css
+│   ├─ Layout.jsx
+│   └─ main.jsx
+├─ db.json
+├─ back.json(Backup for db.json data)
+├─ package.json
+└─ README.md
+```
+
+## 🔗 Connect with Me
+
+[💼 LinkedIn Profile](https://www.linkedin.com/in/basudev-pokharel/)
