@@ -12,6 +12,11 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  & input: {
+    border: 2px solid red;
+    background-color: "green";
+  }
 `;
 
 const Name = styled.h2`
@@ -56,6 +61,12 @@ const Success = styled.p`
   color: green;
 `;
 
+const Input = styled.input`
+  border: 2px solid grey;
+  border-radius: 4px;
+  padding: 1px;
+`;
+
 const EmployeeCard = ({
   id,
   age,
@@ -91,11 +102,16 @@ const EmployeeCard = ({
   }
   function EditRequest(id) {
     // console.log(data);
-    axios.patch(`http://localhost:5050/employees/${id}`, data).then((data) => {
-      getRequest();
-      setisEdit(false);
-      setUpdateDone(true);
-    });
+    axios
+      .patch(
+        `https://react-employees-backend.onrender.com/employees/${id}`,
+        data
+      )
+      .then((data) => {
+        getRequest();
+        setisEdit(false);
+        setUpdateDone(true);
+      });
   }
   useEffect(() => {
     setTimeout(() => {
@@ -107,35 +123,35 @@ const EmployeeCard = ({
     <Card>
       {isEdit ? (
         <>
-          <input
+          <Input
             type="text"
             placeholder="Enter Name"
             value={data.name}
             name="name"
             onChange={handleChange}
           />
-          <input
+          <Input
             type="text"
             placeholder="Enter Role"
             value={data.role}
             name="role"
             onChange={handleChange}
           />
-          <input
+          <Input
             type="text"
             placeholder="Enter Location"
             value={data.location}
             name="location"
             onChange={handleChange}
           />
-          <input
+          <Input
             type="number"
             placeholder="Enter Age"
             value={data.age}
             name="age"
             onChange={handleChange}
           />
-          <input
+          <Input
             type="number"
             placeholder="Enter Years"
             value={data.yearsStarted}

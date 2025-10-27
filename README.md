@@ -79,3 +79,7 @@ React_employees/
 ## 🔗 Connect with Me
 
 [💼 LinkedIn Profile](https://www.linkedin.com/in/basudev-pokharel/)
+
+## 🏃 See Live
+
+[💼 View](https://www.linkedin.com/in/basudev-pokharel/)

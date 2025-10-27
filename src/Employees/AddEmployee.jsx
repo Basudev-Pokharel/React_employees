@@ -68,9 +68,11 @@ function AddEmployee() {
   function Submit(e) {
     e.preventDefault();
     // console.log(data);
-    axios.post(`http://localhost:5050/employees`, data).then((data) => {
-      navigate("/employees");
-    });
+    axios
+      .post(`https://react-employees-backend.onrender.com/employees`, data)
+      .then((data) => {
+        navigate("/employees");
+      });
   }
   return (
     <Section className="employee-form">
