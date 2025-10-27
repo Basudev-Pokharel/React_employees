@@ -82,4 +82,4 @@ React_employees/
 
 ## 🏃 See Live
 
-[💼 View](https://www.linkedin.com/in/basudev-pokharel/)
+[💼 View](https://react-employees-one.vercel.app/)
